@@ -38,10 +38,11 @@ public class Cashier extends Staff{
     public static void sell(Store store, LinkedList<CustomerOrder> customerOrderList )  {
         List<Products> productsList = ReadExcel.reader();
         LinkedList<CustomerOrder> newCustomerOrderList  = store.getNewCustomerOrderList();
-        //Collections.sort(newCustomerOrderList);
         for(int k = 0; k < newCustomerOrderList.size(); k++){
             for(int i = 0; i < productsList.size(); i++){
-
+                if(!(productsList.get(i).getProductName().equals(newCustomerOrderList.get(k).getProductName()))) {
+                    continue;
+                }
                 if(productsList.get(i).getProductName().equals(newCustomerOrderList.get(k).getProductName())){
                     if(productsList.get(i).getQuantity() < newCustomerOrderList.get(k).getQuantity()){
                         throw new OutOfStockException("OUT OF STOCK!!!");
