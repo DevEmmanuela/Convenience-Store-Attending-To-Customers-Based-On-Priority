@@ -5,20 +5,18 @@ import java.util.Comparator;
 
 public class CustomerOrder implements Comparable<CustomerOrder>{
 
-    private String customerName;
+    private Customers customerName;
     private String productName;
     private int quantity;
 
     public CustomerOrder() {
     }
 
-    public CustomerOrder(String customerName, String productName, int quantity) {
+    public CustomerOrder(Customers customerName, String productName, int quantity) {
         this.customerName = customerName;
         this.productName = productName;
         this.quantity = quantity;
     }
-
-
 
     @Override
     public String toString() {
@@ -31,7 +29,7 @@ public class CustomerOrder implements Comparable<CustomerOrder>{
 
 
 
-    public String getCustomerName() {
+    public Customers getCustomerName() {
         return customerName;
     }
 
@@ -44,7 +42,7 @@ public class CustomerOrder implements Comparable<CustomerOrder>{
     }
 
 
-    public void setCustomerName(String customerName) {
+    public void setCustomerName(Customers customerName) {
         this.customerName = customerName;
     }
 
@@ -72,7 +70,7 @@ public class CustomerOrder implements Comparable<CustomerOrder>{
 
     @Override
     public int compareTo(CustomerOrder o) {
-        if(o.productName == this.productName){
+        if(o.productName != this.productName){
             return 1;
         }
         else {
