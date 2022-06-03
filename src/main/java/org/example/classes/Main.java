@@ -26,9 +26,9 @@ public class Main {
         customer3.setEmailAddress("enoch@gmail.com");
 
 
-        CustomerOrder customerOrder = new CustomerOrder(customer.getName(), "Chocolate", 2);
-        CustomerOrder customerOrder2 = new CustomerOrder(customer2.getName(), "Lettuce", 1);
-        CustomerOrder customerOrder3 = new CustomerOrder(customer3.getName(), "Television", 3);
+        CustomerOrder customerOrder = new CustomerOrder(customer.getName(), "Television", 2);
+        CustomerOrder customerOrder2 = new CustomerOrder(customer2.getName(), "Lettuce", 11);
+        CustomerOrder customerOrder3 = new CustomerOrder(customer3.getName(), "Chocolate", 3);
 
 
         LinkedList<CustomerOrder> customerOrderList = store.getCustomerOrderList();

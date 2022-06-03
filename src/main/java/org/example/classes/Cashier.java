@@ -45,7 +45,7 @@ public class Cashier extends Staff{
                 }
                 if(productsList.get(i).getProductName().equals(newCustomerOrderList.get(k).getProductName())){
                     if(productsList.get(i).getQuantity() < newCustomerOrderList.get(k).getQuantity()){
-                        throw new OutOfStockException("OUT OF STOCK!!!");
+                        System.out.println("OUT OF STOCK!!!");
                     }
                     else if(productsList.get(i).getQuantity() > 0){
                         productsList.get(i).setQuantity(productsList.get(i).getQuantity() - newCustomerOrderList.get(k).getQuantity());
